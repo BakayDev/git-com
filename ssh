@@ -1,0 +1,70 @@
+// Started init git
+echo "# b-react" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M master
+git remote add origin git@github.com:BakayDev/b-react.git
+git push -u origin master
+
+
+TL;DR version
+// delete branch locally
+git branch -d localBranchName
+
+// delete branch remotely
+git push origin --delete remoteBranchName
+
+git fetch
+Команда git fetch связывается с удалённым репозиторием и забирает из него все изменения, которых у вас пока нет и сохраняет их локально.
+
+
+git pull
+Команда git pull работает как комбинация команд git fetch и git merge, т.е. Git вначале забирает изменения из указанного удалённого репозитория, а затем пытается слить их с текущей веткой.
+
+
+Просморт веток
+git branch
+
+Переключение веток
+git checkout develop
+
+создание ветки 
+git chekout -b forWork
+
+git checkout -b iss53
+
+слияние веток 
+git merge forWork
+
+
+ git branch -d hotfix
+Deleted branch hotfix (3a0874c).
+
+
+
+Вы решаете, что теперь вы будете заниматься проблемой #53 из вашей системы отслеживания ошибок. Чтобы создать ветку и сразу переключиться на нее, можно выполнить команду git checkout с параметром -b:
+
+$ git checkout -b iss53
+Switched to a new branch "iss53"
+Это тоже самое что и:
+
+$ git branch iss53
+$ git checkout iss53
+
+
+git checkout master
+git merge hotfix
+
+git branch -d hotfix
+Deleted branch hotfix (3a0874c).
+
+
+$ git checkout master
+Switched to branch 'master'
+$ git merge iss53
+Merge made by the 'recursive' strategy.
+index.html |    1 +
+1 file changed, 1 insertion(+)
+
+add-optimazer-html
